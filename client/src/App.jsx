@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getAllUsersData } from './utils/request';
+import { getAllUsersData, editUser, deleteUser} from './utils/request';
 import './App.css';
 import UserForm from './component/UserForm';
 import UserList from './component/UserList';
@@ -22,6 +22,20 @@ class App extends Component {
     this.setState({users: allUsers});
   }
 
+  updateUser = async (id, detailsToEdit) => {
+    const updateSuccess = await editUser(id, detailsToEdit);
+    if(updateSuccess) {
+      this.getAllUsers();
+    }
+  }
+
+  deleteUser = async (id) => {
+    const deleteSuccess = await deleteUser(id);
+    if (deleteSuccess) {
+      this.getAllUsers();
+    }
+  }
+
   render() {
     return (
       <div className="App container">
@@ -33,6 +47,8 @@ class App extends Component {
        />
         <UserList 
           users={this.state.users}
+          onEdit={this.updateUser}
+          onDelete={this.deleteUser}
         />
       </div>
     );
