@@ -24,4 +24,8 @@ app.get('/', (req, res) => {
     res.status(200).json(`Serveris veikia ant porto ${PORT}`);
 });
 
+const userRoutes = require('./server/Routes/UserRoutes');
+app.use('/', userRoutes);
+
+
 app.listen(PORT, console.log(`server running on port ${PORT}`));
