@@ -32,6 +32,17 @@ router.get('/api/users', async (req, res) => {
   }
 });
 
+router.put('/api/user/edit/:id', async (req, res) => {
+  const userId = req.params.id;
+  const detailsToEdit = req.body;
+
+  try {
+    const updateResult = await User.findByIdAndUpdate(userId, detailsToEdit);
+    res.json(updateResult);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 module.exports = router;
