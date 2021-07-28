@@ -1,0 +1,4 @@
+###  new User
+
+POST http://localhost:4000/api/user/new
+Content-Type: 'application/json
