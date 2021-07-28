@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/RaimondasGrabauskas/user-fullstack-cred/issues"
   },
-  "homepage": "https://github.com/RaimondasGrabauskas/user-fullstack-cred#readme"
+  "homepage": "https://github.com/RaimondasGrabauskas/user-fullstack-cred#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.3",
+    "morgan": "^1.10.0"
+  }
 }
