@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { getAllUsersData } from './utils/request';
 import './App.css';
 import UserForm from './component/UserForm';
+import UserList from './component/UserList';
 
 
 class App extends Component {
@@ -23,10 +24,16 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App container">
+        <div className="mb-4">
+          <h1 className="text-center">User cred</h1>
+        </div>
        <UserForm 
         getAllUsers={this.getAllUsers}
        />
+        <UserList 
+          users={this.state.users}
+        />
       </div>
     );
   };

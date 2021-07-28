@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import User from './User';
 
 class UserList extends Component {
 
@@ -10,7 +11,15 @@ class UserList extends Component {
   render() {
     return (
       <div>
-        MyForm
+        <h2 className="text-center">User list</h2>
+        <div className="user-list d-flex flex-wrap">
+          {this.props.users.map((user) => (
+            <User 
+              key={user.id}
+              userData={user}
+            />
+          ))}
+        </div>
       </div>
     );
   };
