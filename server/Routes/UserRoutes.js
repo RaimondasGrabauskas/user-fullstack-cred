@@ -7,10 +7,10 @@ const router = express.Router();
 
 router.post('/api/user/new', async (req, res) => {
   const newUserDetails = {
-    name: 'John',
-    age: 25,
-    email: 'john@gmail.com',
-    password: 'codeacademy',
+    name: 'Arthur',
+    age: 41,
+    email: 'arthur@gmail.com',
+    password: 'bestpassword',
   };
 
   const newUser = new User(newUserDetails);
@@ -19,9 +19,20 @@ router.post('/api/user/new', async (req, res) => {
     const creatingNewUserResult = await newUser.save();
     res.json(creatingNewUserResult);
   } catch (err) {
-    res.status(500).json(err)
+    res.status(500).json(err);
   }
 
+});
+
+// get all users
+
+router.get('/api/users', async (req, res) => {
+  try {
+    const usersResult = await User.find();
+    res.json(usersResult);
+  } catch {
+    res.status(500).json(err);
+  }
 });
 
 
