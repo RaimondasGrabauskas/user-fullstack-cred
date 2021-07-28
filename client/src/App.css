@@ -1,1 +1,31 @@
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.App {
+  background-color: rgb(209, 204, 204);
+}
+
+/* user*/
+
+.card {
+  padding: 10px;
+}
+.card-body {
+  background-color: grey;
+  border-radius: 5px;
+}
+
+/* form */
+
+.form {
+  padding: 10px;
+  background-color: grey;
+  border-radius: 10px;
+  margin-bottom: 3em;
+  color: rgb(209, 204, 204);
+}

@@ -58,22 +58,22 @@ class UserForm extends Component {
     return (
       <div className="w-50">
       <h2>Add User</h2>
-      <form onSubmit={this.addUser} autoComplete="off">
+      <form className="form" onSubmit={this.addUser} autoComplete="off">
         <div className="form-group">
           <label>Enter name</label>
-          <input value={name} onChange={this.handleInput} type="text" className="form-control" name="name" />
+          <input required value={name} onChange={this.handleInput} type="text" className="form-control" name="name" />
         </div>
         <div className="form-group">
           <label >Enter age</label>
-          <input value={age} onChange={this.handleInput} type="text" className="form-control" name="age"/>
+          <input required value={age} onChange={this.handleInput} type="text" className="form-control" name="age"/>
         </div>
         <div  className="form-group">
           <label htmlFor="population">Enter email</label>
-          <input value={email} onChange={this.handleInput} type="email" className="form-control" name="email"/>
+          <input required value={email} onChange={this.handleInput} type="email" className="form-control" name="email"/>
         </div>
         <div className="form-group">
           <label>Enter password</label>
-          <input value={password} onChange={this.handleInput} type="text" className="form-control" name="password"/>
+          <input required value={password} onChange={this.handleInput} type="text" className="form-control" name="password"/>
         </div>
         <button className="btn btn-primary">Add user</button>
     </form>
