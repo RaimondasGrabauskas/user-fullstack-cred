@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { getAllUsersData, createUser } from './utils/request';
+import { getAllUsersData } from './utils/request';
 import './App.css';
+import UserForm from './component/UserForm';
 
 
 class App extends Component {
@@ -23,7 +24,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       
+       <UserForm 
+        getAllUsers={this.getAllUsers}
+       />
       </div>
     );
   };

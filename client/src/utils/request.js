@@ -12,9 +12,9 @@ export const getAllUsersData = async () => {
   }
 };
 
-export const createUser = async () => {
+export const createUser = async (detailsToCreateUser) => {
   try {
-    const createResult = await axios.post(createUserUrl);
+    const createResult = await axios.post(createUserUrl, detailsToCreateUser);
     return createResult.data;
   } catch (err) {
     console.log(err); 

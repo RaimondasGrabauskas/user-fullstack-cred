@@ -6,13 +6,10 @@ const router = express.Router();
 // create new user route
 
 router.post('/api/user/new', async (req, res) => {
-  const newUserDetails = {
-    name: 'Arthur',
-    age: 41,
-    email: 'arthur@gmail.com',
-    password: 'bestpassword',
-  };
 
+  const newUserDetails = req.body;
+  console.log('newUserDetails', newUserDetails);
+  
   const newUser = new User(newUserDetails);
 
   try {
