@@ -44,5 +44,15 @@ router.put('/api/user/edit/:id', async (req, res) => {
   }
 });
 
+router.delete('/api/user/delete/:id', async (req, res) => {
+  const userToDeleteId = req.params.id;
+  try {
+    const deleteResult = await User.findByIdAndDelete(userToDeleteId);
+    res.json(deleteResult);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;
