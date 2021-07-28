@@ -57,25 +57,25 @@ class UserForm extends Component {
     const { name, age, email, password } = this.state.inputValue;
     return (
       <div className="w-50">
-      <h2>Add User</h2>
+      <h2>Pridėkite vartotoja</h2>
       <form className="form" onSubmit={this.addUser} autoComplete="off">
         <div className="form-group">
-          <label>Enter name</label>
+          <label>Įveskite vardą</label>
           <input required value={name} onChange={this.handleInput} type="text" className="form-control" name="name" />
         </div>
         <div className="form-group">
-          <label >Enter age</label>
+          <label >Įveskite metus</label>
           <input required value={age} onChange={this.handleInput} type="text" className="form-control" name="age"/>
         </div>
         <div  className="form-group">
-          <label htmlFor="population">Enter email</label>
+          <label htmlFor="population">Įveskite el. pašto adresą</label>
           <input required value={email} onChange={this.handleInput} type="email" className="form-control" name="email"/>
         </div>
         <div className="form-group">
-          <label>Enter password</label>
+          <label>Iveskite slaptažodį</label>
           <input required value={password} onChange={this.handleInput} type="text" className="form-control" name="password"/>
         </div>
-        <button className="btn btn-primary">Add user</button>
+        <button className="btn btn-primary">Pridėkite</button>
     </form>
   </div>
     );

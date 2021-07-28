@@ -12,14 +12,12 @@ class UserList extends Component {
     const {onEdit, onDelete} = this.props;
     return (
       <div>
-        <h2 className="text-center">User list</h2>
+        <h2 className="text-center">Vartotojų sąrašas</h2>
         <div className="user-list d-flex flex-wrap">
           {this.props.users.length === 0 ? (
-            <div className="card text-center">
-              <div className="card-body">
-                <h5 className="card-title">OOPS there is no users</h5>
-              </div>
-            </div>
+            <div className="alert alert-dark" role="alert">
+            OOPS nėra vartotoju prašome iveskite vartotoja!
+          </div>
           ) : (       
             this.props.users.map((user) => (
               <User 

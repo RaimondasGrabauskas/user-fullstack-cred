@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <div className="App container">
         <div className="mb-4">
-          <h1 className="text-center">User cred</h1>
+          <h1 className="text-center">Vartotojų tvarkyklė</h1>
         </div>
        <UserForm 
         getAllUsers={this.getAllUsers}
